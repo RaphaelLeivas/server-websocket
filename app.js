@@ -14,7 +14,7 @@ app.use(express.json());
  
 app.use(morgan('dev'));
  
-app.post('/login', (req, res, next) => {
+app.post('/', (req, res, next) => {
     res.json({ token: '123456' });
 });
  
