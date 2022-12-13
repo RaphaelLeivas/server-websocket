@@ -6,6 +6,7 @@ module.exports = (server) => {
     });
 
     wss.broadcast = function broadcast(msg) {
+        console.log(`Received message: ${msg}`);
         wss.clients.forEach(function each(client) {
             client.send("Message received!");
         });
